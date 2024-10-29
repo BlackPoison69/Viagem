@@ -1,0 +1,216 @@
+/* Reseta margens e paddings padrão e define a fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para o logotipo */
+.logo a {
+  color: white; /* Cor do link não visitado */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.logo a:visited {
+  color: white; /* Cor do link visitado */
+}
+
+/* Estilos para o corpo e elementos gerais */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilos do cabeçalho */
+header,
+.fixo {
+  display: flex; /* Define o cabeçalho como um contêiner flexível */
+  background-color: #004080; /* Cor de fundo do cabeçalho */
+  color: #fff;
+  padding: 15px 20px;
+  justify-content: space-between; /* Espaça os itens entre si */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  height: 10vh; /* Altura do cabeçalho */
+  position: fixed; /* Cabeçalho fixo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Estilos do logo no cabeçalho */
+header .logo h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Estilos de navegação */
+nav ul {
+  list-style: none; /* Remove a lista padrão */
+  display: flex; /* Alinha os itens horizontalmente */
+  padding: 0; /* Remove o padding padrão */
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaçamento horizontal entre os itens */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s; /* Transição suave na cor do texto */
+}
+
+nav ul li a:hover {
+  opacity: 0.8; /* Efeito hover nos links */
+}
+
+/* Estilos do banner */
+.banner {
+  position: relative;
+  background: url("img/banner.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner * {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold; /* Negrito no título do banner */
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilos do formulário de busca */
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+  padding: 10px;
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Estilos da seção de pacotes */
+.pacotes {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pacotes h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de cada pacote */
+.pacote {
+  display: inline-block;
+  width: 30%;
+  background-color: #fff;
+  margin: 0 1%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.pacote:hover {
+  transform: translateY(-5px); /* Efeito de movimento ao passar o mouse */
+}
+
+.pacote img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.pacote h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.pacote p {
+  font-size: 16px;
+  color: #555;
+}
+
+.pacote button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .pacote {
+    width: 100%; /* Os pacotes ocupam 100% da largura em telas menores */
+    margin: 20px 0; /* Margem vertical para melhor espaçamento */
+  }
+
+  header .logo h1 {
+    font-size: 20px; /* Reduzir o tamanho da fonte no mobile */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Reduzir o espaçamento entre os itens no mobile */
+  }
+}
+
+.aumentar {
+  transition: transform 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.aumentar:hover {
+  transform: translateY(-5px) scale(1.05); /* Efeito de movimento e aumento ao passar o mouse */
+}
