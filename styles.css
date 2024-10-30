@@ -1,0 +1,390 @@
+/* Reseta margens e paddings padrão e define a fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Sombra para títulos */
+h2,
+.banner h2 {
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+.full-height {
+  min-height: 100vh; /* Define a altura mínima como 100% da altura da janela de visualização */
+}
+/* styles.css */
+.centralizar {
+  display: flex; /* Ativa o modelo de flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Garante que o pai tenha altura */
+}
+.titulo {
+  margin-top: 18px;
+}
+
+/* Sombra para elementos com a classe shadow */
+.shadow {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+/* Estilos para o logotipo */
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+a:focus{
+  display: none;
+}
+
+.logo a:visited {
+  color: white;
+}
+
+/* Estilos para o corpo e elementos gerais */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Estilo para campos de formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilos do cabeçalho */
+header,
+.fixo {
+  display: flex;
+  background-color: #004080;
+  color: #fff;
+  padding: 15px 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos do logo no cabeçalho */
+header .logo h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Estilos de navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  opacity: 0.8;
+}
+
+nav ul li a:focus {
+  outline: 2px solid #ffa500;
+  outline-offset: 3px;
+}
+
+/* Estilos do banner */
+.banner {
+  display: flex;
+  position: relative;
+  background: url("img/banner.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+  height: 95vh;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner * {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilos do formulário de busca */
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+  padding: 10px;
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Estilos da seção de pacotes */
+.pacotes {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pacotes h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de cada pacote */
+.pacote {
+  display: inline-block;
+  width: 30%;
+  background-color: #fff;
+  margin: 0 1%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pacote:hover {
+  transform: translateY(-5px);
+}
+
+.pacote img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.pacote h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.pacote p {
+  font-size: 16px;
+  color: #555;
+}
+
+.pacote button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pacote button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #003366;
+}
+
+.pacote button:focus {
+  outline: 2px solid #ffa500;
+  outline-offset: 3px;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .pacote {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  header .logo h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .banner {
+    padding: 50px 0;
+  }
+
+  .banner h2 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+}
+
+/* Animação de aumentar ao passar o mouse */
+.aumentar {
+  transition: transform 0.3s;
+}
+
+.aumentar:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Efeito de vidro para campos */
+.campo-vidro {
+  backdrop-filter: blur(2px);
+  border: solid gray 1px;
+  border-radius: 20px;
+  transition: backdrop-filter 0.3s ease;
+}
+
+/* Estilo de fonte e sombreamento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para tamanhos responsivos dos textos */
+h1 {
+  font-size: 2.5rem; /* Tamanho padrão */
+}
+
+h2 {
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.banner h2 {
+  font-size: 2rem;
+}
+
+.pacotes h2 {
+  font-size: 1.75rem;
+}
+
+/* Estilos responsivos para textos maiores em telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2,
+  .banner h2,
+  .pacotes h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  .banner h2,
+  .pacotes h2 {
+    font-size: 1.25rem;
+  }
+
+  .pacote h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Estilos do banner */
+.banner {
+  display: flex;
+  position: relative;
+  background: url("img/banner.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h2 {
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 1rem;
+}
+
+.search-form input,
+.search-form button {
+  font-size: 1rem;
+}
+
+/* Estilos para o cabeçalho */
+header .logo h1 {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 strong {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .logo h1 strong {
+    font-size: 1.2rem;
+  }
+}
